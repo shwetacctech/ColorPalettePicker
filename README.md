@@ -28,6 +28,44 @@ void YourFunction() {
     qubeMeshingObject.colorPicker();
 }
 ```
+# OpenGLWindow Class - writeStringToFile Method
+
+The `writeStringToFile` method in the `OpenGLWindow` class is responsible for writing a GLSL fragment shader code to a file. This method constructs a basic GLSL fragment shader code by appending the provided text to the shader, creating a new or overwriting an existing file specified by `filePath`.
+
+## Method: writeStringToFile(const QString& text, const QString& filePath)
+
+### Description
+
+This method creates or opens a file specified by `filePath` and writes a GLSL fragment shader code into it. It constructs the fragment shader by appending the provided `text` to the shader template, setting the color to be used for `gl_FragColor`.
+
+### Parameters
+
+- `text`: A QString containing the color information to be embedded in the fragment shader code.
+- `filePath`: A QString representing the path of the file where the GLSL fragment shader code will be written.
+
+### Usage
+
+Invoke the `writeStringToFile` method, passing the desired color information (`text`) and the file path (`filePath`) where the GLSL fragment shader code should be written.
+
+### Example
+
+```cpp
+// Example usage of the writeStringToFile method
+#include "OpenGLWindow.h"
+
+void YourFunction() {
+    OpenGLWindow openGLWindowObject;
+
+    // Example color string
+    QString colorString = "255, 0, 0, 255"; // Red color (RGBA format)
+
+    // File path where the GLSL fragment shader code will be written
+    QString filePath = "fragmentShader.glsl";
+
+    // Call the writeStringToFile method
+    openGLWindowObject.writeStringToFile(colorString, filePath);
+}
+```
 ![Screenshot (170)](https://github.com/shwetacctech/ColorPalettePicker/assets/149310316/0410c0ce-77df-4c56-aaeb-070e0939280e)
 ![Screenshot (171)](https://github.com/shwetacctech/ColorPalettePicker/assets/149310316/fdacf22f-fc18-4ecd-821d-0f4b7c307b8e)
 ![Screenshot (172)](https://github.com/shwetacctech/ColorPalettePicker/assets/149310316/18d813ab-4768-428f-b834-5c1462993137)
